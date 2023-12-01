@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    position: absolute;
+}
+
+#pills {
+    border-radius: 5px;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btnshadow {
+    border-radius: 10px;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.form-box {
+    width: 30%;
+    height: 80%;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+
+}
+
+.form-input-box {
+    width: 26%;
+    height: 58%;
+    margin: auto;
+    /* background-color: grey; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+}
+
+.spacer {
+    height: 50px;
+}
+
+.about {
+    color: white;
+    background-color: #32383e;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}

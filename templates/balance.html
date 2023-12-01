@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    balance
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/balance.css">
+{% endblock %}
+
+{% block script %}
+    <script src="/static/js/balance.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="background"></div>
+    <div class="popup">
+        <div class="header">
+            <strong class="headerText">This is the first time you log into your account</strong>
+        </div>
+        <div class="main">
+            <div style="padding:2rem;">Please confirm your current balance</div>
+            <form action="/updateBalance" method="post">
+                <input id="input" type="number" name="balance" step="0.01" placeholder="0.00" required>
+                <br>
+                <div style="height:20px; position:relative; width: 100%;"></div>
+                <button id="submit" type="submit">Confirm</button>
+                <footer>*You can change the balance in the settings later.</footer>
+            </form>
+        </div>
+    </div>
+{% endblock %}

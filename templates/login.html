@@ -1,0 +1,75 @@
+{% extends "loginlayout.html" %}
+
+{% block navbar %}
+
+    <ul class="nav nav-pills nav-justified mb-3" role="tablist" id="pills">
+        <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="tab-login" data-toggle="pill" href="#login" role="tab"
+            aria-controls="login" aria-selected="true">Login</a>
+        </li>
+        <li class="nav-item" role="presentation">
+        <a class="nav-link" id="tab-register" data-toggle="pill" href="#register" role="tab"
+            aria-controls="register" aria-selected="false">Register</a>
+        </li>
+    </ul>
+
+{% endblock %}
+
+{% block form %}
+
+    <!-- Pills content -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="tab-login">
+
+          <form action="/auth" method="post">
+            <!-- Username input -->
+                <div class="form-outline mb-4">
+                  <input type="text" autocomplete="off" required id="loginName" class="form-control" name="username"/>
+                  <label class="form-label" for="loginName">Username</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" autocomplete="off" required id="loginPassword" class="form-control" name="password"/>
+                  <label class="form-label" for="loginPassword">Password</label>
+                </div>
+
+            <!-- Submit button -->
+            <div class="text-center">
+              <button type="submit" class=" btn btn-primary btn-block mb-4 btnshadow">Sign in</button>
+            </div>
+          </form>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="tab-register">
+
+          <form action="/reg" method="post">
+
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+              <input type="text" autocomplete="off" required id="registerUsername" class="form-control" name="username"/>
+              <label class="form-label" for="registerUsername">Username</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" autocomplete="off" required id="registerPassword" class="form-control" name="password1"/>
+              <label class="form-label" for="registerPassword">Password</label>
+            </div>
+
+            <!-- Repeat Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" autocomplete="off" required id="registerRepeatPassword" class="form-control" name="password2"/>
+              <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-3 btnshadow">Register</button>
+          </form>
+
+        </div>
+      </div>
+
+{% endblock %}

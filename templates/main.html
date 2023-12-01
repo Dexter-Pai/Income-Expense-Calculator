@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block mainCss %}
+    <link rel="stylesheet" href="/static/css/main.css">
+{% endblock %}
+
+{% block body %}
+
+  <!-- <div class="sideBar" id="sidenav-1">
+    <a class="close_side_bar" onclick=" closeSideBar()"> &times; </a>
+    <a href = "index.html"> About </a>
+    <a href = "routine.html"> Routine </a>
+    <a href = "treats.html"> Treats </a>
+    <a href = "family.html"> Family </a>
+  </div> -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top navBar">
+    <!-- Container wrapper -->
+    <div class="container-fluid shadow-5-strong">
+      <!-- <div class="hamburger">
+        <div><b>&#9776;</b></div>
+      </div> -->
+
+      <!-- Navbar brand -->
+      <div id="brand">
+        <a class="navbar-brand" href="/"> <img src="https://cdn3.iconfinder.com/data/icons/business-654/64/Capital-cost-budget-money-calculator-business-finance-1024.png" style="max-height:25px; max-width:25px; padding: 2px;"> Income Expense Calculator</a>
+      </div>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="links" style="padding-left:30px;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <!-- Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/data_entry">Data Entry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/history">History</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/profile">Profile</a>
+            </li> -->
+          </ul>
+        </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" style="padding: 20px;">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item" style="padding: 20px;">
+              <a class="nav-link" href="/logout">Logout</a>
+            </li>
+          </ul>
+          <i><a href="/setting"><img src="https://cdn-icons-png.flaticon.com/512/771/771203.png" style="max-width:32px; max-height:32px;"></a></i>
+      </div>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+  <div id="background">
+    <div id="popup">
+      {% block main %}{% endblock %}
+    </div>
+  </div>
+
+{% endblock %}

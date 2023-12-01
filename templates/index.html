@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+
+{% block script %}
+    <script src="/static/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block css %}
+    <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+{% endblock %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div style="display: flex; width: 100%; height: 100%; overflow-y: scroll; padding: 20px;">
+        <div style="width: 25%; display: block;">
+            <div style="width: 100%; height: 30%; top: 0;">
+                <div class="">
+                    <button id="balance_button" type="button" class="btn btn-success btn-block btnshadow" style="max-width: 200px; margin-left: 50%; transform: translate(-50%,10%);">Remaining Balance</button>
+                    <button id="spending_button" type="button" class="btn btn-success btn-block btnshadow" style="max-width: 200px; margin-left: 50%; transform: translate(-50%,10%);">Spending Rate</button>
+                </div>
+                <br>
+                <strong>
+                    <h6 class="font-weight-bold" style="text-align:center;">
+                        <span id="text_1">
+                            You spend
+                        </span>
+                        <span id="spending"></span>
+                        <span id="text_2">
+                            more than you earn
+                        </span>
+                    </h6>
+                </strong>
+            </div>
+            <div style="height: 70%; width: 100%; bottom: 0;">
+                <canvas id="total_chart"></canvas>
+            </div>
+        </div>
+        <div style="width: 10%;"></div>
+        <div style="width: 65%;">
+            <canvas id="income_chart"></canvas>
+        </div>
+    </div>
+{% endblock %}

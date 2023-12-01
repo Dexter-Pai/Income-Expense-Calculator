@@ -1,0 +1,60 @@
+{% extends "main.html" %}
+
+{% block script %}
+    <script src="/static/js/data_entry.js"></script>
+{% endblock %}
+
+{% block css %}
+    <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+{% endblock %}
+
+{% block title %}
+    Data Entry
+{% endblock %}
+
+{% block main %}
+<div style="display: flex; width: 100%; height: 100%; position: relative; overflow-y: scroll;">
+    <div style=" margin: auto; width:30%; height: 100%; display: block; padding: 30px; text-align: center; border-right: 2px solid green;">
+        <div>
+            <h1>Data Entry</h1>
+            <br>
+        </div>
+    </div>
+    <div style="text-align: left; padding: 30px; width: 60%;">
+        <form action="/data_entry" method="post">
+            <div class="mb-3">
+                <label for="type">Select Income or Expense</label>
+                <!-- <br> -->
+                <select class="form-select" id="type" name="type_name" required autofocus>
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="income"> Income </option>
+                    <option value="expense"> Expense </option>
+                </select>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="type">Select Income or Expense</label>
+                <!-- <br> -->
+                <input type="number" class="form-control" name="amount" step="0.01" placeholder="0.00" required>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="subtype">Select Category</label>
+                <!-- <br> -->
+                <select class="form-select" id="subtype" name="subtype_name" required>
+                </select>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="input">Enter Details of Transactions</label>
+                <!-- <br> -->
+                <textarea class="form-control" row="3" type="text" name="detail" placeholder="optional details"></textarea>
+            </div>
+            <br>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success btn-block mb-3 btnshadow" style="max-width: 200px; margin-left: 50%; transform: translate(-50%,10%);">Update Database</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

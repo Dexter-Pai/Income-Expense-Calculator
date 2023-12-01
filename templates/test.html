@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+
+{% block script %}
+    <script src="/static/js/test.js"></script>
+{% endblock %}
+
+{% block css %}
+    <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+{% endblock %}
+
+{% block title %}
+    Setting
+{% endblock %}
+
+{% block main %}
+    <div class="setting_menu" id="setting_main_menu">
+        <div>
+            <label for="change_name">Send js data through Ajax</label>
+            <button type="button" id="change_name">Send!</button>
+    </div>
+    <div>
+        <span>Output :</span>
+        <span id="result">NONE</span>
+    </div>
+{% endblock %}

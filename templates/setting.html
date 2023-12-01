@@ -1,0 +1,88 @@
+{% extends "main.html" %}
+
+{% block script %}
+    <script src="/static/js/setting.js"></script>
+{% endblock %}
+
+{% block css %}
+    <!-- <link rel="stylesheet" href="/static/css/index.css"> -->
+{% endblock %}
+
+{% block title %}
+    Setting
+{% endblock %}
+
+{% block main %}
+    <div style="display: flex; width: 100%; height: 100%; position: relative; overflow-y: scroll;">
+        <div style="margin: auto; width:30%; height: 100%; display: block; padding: 30px; text-align: center; border-right: 2px solid green;">
+            <div>
+                <h1>Setting</h1>
+                <br>
+                <br>
+                <div style="text-align: left; padding: 10px;">
+                    <p id="user_info_username">username: </p>
+                    <p id="user_info_balance">balance: </p>
+                </div>
+            </div>
+        </div>
+            <div style="padding: 30px; width: 60%;">
+                <div class="setting_menu" id="setting_menu">
+                    <div>
+                        <div>
+                            <label for="change_password">Change Your password</label>
+                            <br>
+                            <button class="btn btn-success" type="button" id="change_password">change password</button>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <label for="change_name">Change Your initial balance</label>
+                            <br>
+                            <button class="btn btn-success" type="button" id="change_balance">change balance</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting_menu form-group" id="password_menu">
+                    <div>
+                        <input type="hidden" id="id" placeholder="username" value="password">
+                        <div>
+                            <label for="password">Type in your old password</label>
+                            <input class="form-control" type="password" id="old_password" placeholder="old password">
+                        </div>
+                        <div>
+                            <label for="new_password">Type in your new password</label>
+                            <input class="form-control" type="password" id="new_password" placeholder="new password">
+                        </div>
+                        <div>
+                            <label for="confirm_password">Type in your new password again</label>
+                            <input class="form-control" type="password" id="confirm_password" placeholder="new password">
+                        </div>
+                        <br>
+                        <div>
+                            <button class="btn btn-success" type="button" onclick="sendData_password()">change</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting_menu form-group" id="balance_menu">
+                    <div>
+                        <div>
+                            <label for="balance">Change balance</label>
+                            <input class="form-control" type="text" id="balance" placeholder="new balance">
+                        </div>
+                        <br>
+                        <div>
+                            <button class="btn btn-success" type="button" id="change_balance" onclick="sendData_balance()">change balance</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-secondary" type="button" id="back" onclick="back()">Back</button>
+                </div>
+                <div id="result_div">
+                    <span>Message :</span>
+                    <span id="result">NONE</span>
+                </div>
+            </div>
+        <!-- <div style="width:10%; height: 100%;"></div> -->
+    </div>
+{% endblock %}

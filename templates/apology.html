@@ -1,0 +1,13 @@
+{% extends "loginlayout.html" %}
+
+
+{% block navbar %}
+    <div class="text-center">
+        <h1><strong>Error</strong></h1>
+    </div>
+{% endblock %}
+
+
+{% block form %}
+    <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png&width=400" title="{{ top }}" style="border-radius: 10px;">
+{% endblock %}
